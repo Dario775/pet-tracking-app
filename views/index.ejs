@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rastreo de Mascotas</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rastreo de Mascotas</h1>
+    <a href="/registrar"><button>Registrar Mascota</button></a>
+    <ul class="pet-list">
+      <% if(pets.length === 0){ %>
+        <li>No hay mascotas registradas.</li>
+      <% } %>
+      <% pets.forEach(function(pet){ %>
+        <li>
+          <span><%= pet.nombre %></span>
+          <a href="/mascota/<%= pet.id %>"><button>Ver QR</button></a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>

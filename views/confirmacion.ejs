@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mascota Registrada</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mascota Registrada</h1>
+    <p>Se ha registrado exitosamente a <strong><%= pet.nombre %></strong>.</p>
+    <p>Escanea el siguiente código QR y colócalo en el collar de la mascota:</p>
+    <img src="<%= pet.qr %>" alt="QR de la mascota">
+    <div>
+      <a href="/mascota/<%= pet.id %>"><button>Ver Información</button></a>
+      <a href="/"><button>Volver al inicio</button></a>
+    </div>
+  </div>
+</body>
+</html>
