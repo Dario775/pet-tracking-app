@@ -1,0 +1,60 @@
+/*
+TAREA: Crear una aplicación web desde cero para rastreo de mascotas mediante código QR.
+
+FUNCIONALIDAD GENERAL:
+- La aplicación permite registrar mascotas y generar un código QR único por cada una.
+- Cuando alguien escanea el código QR, accede a una página que muestra los datos de la mascota y cómo contactar al dueño.
+
+TECNOLOGÍAS A USAR:
+- Frontend: HTML, CSS, JavaScript.
+- Backend: Node.js con Express (puede usar SQLite o una lista temporal en memoria para almacenamiento).
+- Librería opcional para generar QR: 'qrcode' (npm install qrcode).
+
+REQUISITOS DE LA APLICACIÓN:
+
+1. PÁGINA PRINCIPAL ('/')
+   - Mostrar título: "Rastreo de Mascotas"
+   - Botón que diga "Registrar Mascota"
+   - Lista de mascotas registradas con su nombre y botón "Ver QR"
+
+2. PÁGINA DE REGISTRO ('/registrar')
+   - Formulario con los siguientes campos:
+     - Nombre de la mascota
+     - Raza
+     - Color
+     - Número de identificación (ej. chip o collar)
+     - Teléfono del dueño
+     - Dirección aproximada donde vive
+   - Botón "Registrar"
+   - Al enviar, redirigir a una página de confirmación con el código QR generado para esa mascota
+
+3. PÁGINA QR DE MASCOTA ('/mascota/:id')
+   - Mostrar toda la información de la mascota
+   - Mostrar un botón "Contactar al dueño" que despliegue el número telefónico
+
+4. ESTILO
+   - Usar CSS simple pero limpio (fuentes claras, botones visibles, buena disposición de campos)
+   - Responsive: debe funcionar bien en celulares
+
+5. FUNCIONES BACKEND (Node.js)
+   - Rutas para:
+     - Registrar mascota (POST)
+     - Listar mascotas (GET)
+     - Ver detalles y QR (GET)
+   - Al registrar una mascota, generar un QR con la URL: `/mascota/:id`
+   - Almacenar los datos en memoria o en un pequeño archivo si se desea persistencia
+
+6. ARCHIVOS SUGERIDOS:
+   - app.js (servidor Node)
+   - views/index.html
+   - views/registrar.html
+   - views/mascota.html
+   - public/styles.css
+
+NOTA:
+- Se puede usar la librería 'qrcode' de Node.js para generar la imagen QR.
+- Si se requiere, usar EJS como motor de plantillas para insertar datos dinámicos en HTML.
+
+OBJETIVO FINAL:
+- Tener una aplicación básica donde cada mascota registrada pueda ser localizada a través de un código QR pegado en su collar.
+*/
