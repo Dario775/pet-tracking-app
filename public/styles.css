@@ -15,6 +15,42 @@ body {
 h1 {
   text-align: center;
 }
+header {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #007bff;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 10px 0 20px;
+  font-size: 1.2em;
+}
+
+.hero-btn {
+  background-color: #fff;
+  color: #007bff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 button, input[type="submit"] {
   padding: 10px 15px;
   margin: 5px 0;
