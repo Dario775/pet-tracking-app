@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Información de <%= pet.nombre %></title>
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    function mostrarTelefono() {
+      var tel = document.getElementById('telefono');
+      tel.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1><%= pet.nombre %></h1>
+    <p><strong>Raza:</strong> <%= pet.raza %></p>
+    <p><strong>Color:</strong> <%= pet.color %></p>
+    <p><strong>ID:</strong> <%= pet.identificacion %></p>
+    <p><strong>Dirección:</strong> <%= pet.direccion %></p>
+    <img src="<%= pet.qr %>" alt="QR de la mascota">
+    <div>
+      <button onclick="mostrarTelefono()">Contactar al dueño</button>
+      <p id="telefono" style="display:none;"><a href="tel:<%= pet.telefono %>"><%= pet.telefono %></a></p>
+    </div>
+    <a href="/"><button>Volver</button></a>
+  </div>
+</body>
+</html>
